@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'material-icons/iconfont/material-icons.css';
+
+
+mat-expansion-panel.menu-item-btn .mat-expansion-panel-body {
+    padding: 0 8px 4px !important;
+}
+
+body{
+    background-color: #fafafa;
+}
+
+mat-card.search-zone mat-card-header button{
+    min-width: 10px;
+    padding: 0 10px;
+}
+
+mat-card.search-zone{
+    padding-bottom: 0;
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+mat-card mat-card-content {
+    margin-top: 5px;
+}
+
+/**
+/* Card show view
+**/
+.show-view mat-card-content div:not(.row){
+    padding-top: 15px;
+}
+
+.show-view mat-card-content label , .show-view-content label{
+    color: gray;
+    width: 100%;
+    margin-bottom: 0 !important;
+    font-size: 12px;
+}
+.show-view mat-card-content span, .show-view-content span{
+    color: black;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.show-view mat-card-content span a{
+    color: #007bff!important;
+    text-decoration: underline!important;
+    cursor: pointer!important;
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    opacity: 0.45!important;
+    background-color: whitesmoke;
+}
+/**
+/* Table style
+**/
+.mat-row:nth-child(even){
+    background-color:white;
+}
+
+.mat-row:nth-child(odd){
+    background-color:rgb(245, 245, 245);/*#f5f8fc;*/
+}
+
+/* modal dialog  */
+.mat-dialog-container .mat-card-content .row {
+    margin-right: -5px !important;
+    margin-left: -5px !important;
+}
+
+.mat-dialog-container .mat-card {
+    height: 100% !important;
+}
+
+.mat-dialog-container{
+    width: 100% !important;
+    overflow: hidden;
+    padding: 15px 17px !important;
+    height: auto !important;
+}
+
+.mat-dialog-title {
+    /*display: block !important;*/
+    padding: 10px !important;
+    box-shadow: 0 8px 15px -7px grey !important;
+    margin: -15px -16px 15px -16px !important;
+    background-color: darkcyan !important;/* #007bff!important;*/
+    color: white;
+    font-style: normal;
+    font-size: large;
+    font-weight: bold;
+}
+
+.mat-dialog-actions {
+    box-shadow: 0px -2px 10px -5px grey !important;
+    margin: 1px -15px 0px -15px !important;
+    padding: 2px 0 !important;
+   /* min-height: 12vh !important;*/
+    position: relative !important;
+    bottom: -10px !important;
+}
+
+.mat-dialog-content {
+    display: block !important;
+    margin: 0 -17px !important;
+    padding: 0 15px !important;
+     /* max-height: 60vh !important;*/
+    overflow: auto !important;
+}
+
+.mat-dialog-actions .form-action-bar {
+    margin-top: 0px !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

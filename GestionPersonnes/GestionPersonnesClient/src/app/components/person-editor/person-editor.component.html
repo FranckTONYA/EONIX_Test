@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> Ajouter ou modifier une personne</mat-card-title>
+  </mat-card-header>
+  <div class="card my-5">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" [(ngModel)]="personne.nom" 
+              class="form-control" 
+              id="nom" 
+              name="nom" 
+              placeholder="Entrer le nom"
+              required #nom="ngModel">
+          </div>
+          <div [hidden]="!nom.pristine" class="alert alert-danger">Le nom est requis</div>
+          <div class="form-group">
+            <label for="prenom">Prènom</label>
+            <input type="text" [(ngModel)]="personne.prenom" 
+              class="form-control" 
+              id="prenom" 
+              name="prenom" 
+              placeholder="Entrer le prènom"
+              required #prenom="ngModel">
+            <div [hidden]="!prenom.pristine" class="alert alert-danger">Le prènom est requis</div>
+          </div>
+          <button type="submit" [disabled]="!personForm.form.valid" [mat-dialog-close]="personne" cdkFocusInitial
+            class="btn btn-info">Valider</button>
+          <button mat-button (click)="onNoClick()">Annuler</button>
+        </form>
+      </div>
+    </div>
+</mat-card>

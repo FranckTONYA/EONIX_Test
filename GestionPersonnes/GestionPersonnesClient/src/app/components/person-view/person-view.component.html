@@ -1,0 +1,26 @@
+<mat-card class="show-view">
+    <mat-card-header>
+      <mat-card-title> Details de la personne</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4" >
+          <label>ID</label>
+          <span>{{personne.id}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4" >
+          <label>Prènom</label>
+          <span>{{personne.prenom}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4" >
+          <label>Nom</label>
+          <span>{{personne.nom}}</span>
+        </div>
+      </div>
+    </mat-card-content><br>
+    <mat-divider></mat-divider>
+    <mat-card-footer>
+        <button mat-button (click)="onNoClick()">Fermer</button>
+    </mat-card-footer>
+  </mat-card>
