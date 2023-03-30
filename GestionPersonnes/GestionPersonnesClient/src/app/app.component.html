@@ -2,6 +2,14 @@
   <mat-card-header>
       <mat-card-title style="font-size: 17px;">Gestion de personnes</mat-card-title>
   </mat-card-header>
+  <mat-divider></mat-divider>
+  <div class="row">
+    <input #searchText type="text" matInput placeholder="Recherche par nom ou prènom" 
+    [formControl]="searchFormControl" maxlength="255"/>
+  <button matSuffix mat-button matTooltip="Rechercher"
+      (click)="searchClicked($event)"><mat-icon >search</mat-icon></button>
+  </div>
+ 
   <mat-divider></mat-divider><br>
   <button mat-raised-button (click)="addPerson()">Ajouter</button>
   <mat-card-content >

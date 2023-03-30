@@ -26,4 +26,9 @@ export class PersonneHttpService {
     console.log(personne.id)
     return this.http.delete<Personne>(this.url+"personne/delete-by-id/"+personne.id);
   }
+
+  public search(keyword: string) {
+    console.log(keyword)
+    return this.http.get<Personne[]>(this.url+"personne/search/"+keyword);
+  }
 }

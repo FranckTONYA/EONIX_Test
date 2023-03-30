@@ -35,7 +35,4 @@ export class PersonDeleteComponent {
     this.dialogRef.close();
   }
 
-  // gotoHome() {
-  //   this.router.navigate(['/home']);
-  // }
 }

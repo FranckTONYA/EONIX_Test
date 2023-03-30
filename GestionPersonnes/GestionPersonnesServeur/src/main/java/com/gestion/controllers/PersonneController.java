@@ -91,6 +91,6 @@ public class PersonneController {
     @GetMapping("search/{keyword}")
     public ResponseEntity<?> SearchByKeyword(@PathVariable String keyword){
         logger.debug("Call : Search Person by keyword");
-        return ResponseEntity.ok( personneService.getPersonneRepository().search(keyword));
+        return ResponseEntity.ok( personneService.search(keyword));
     }
 }

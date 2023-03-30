@@ -3,7 +3,7 @@ import { Personne } from './models/personne';
 import { PersonneHttpService } from './services/personne-http.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { PersonEditorComponent } from './components/person-editor/person-editor.component';
 import { PersonDeleteComponent } from './components/person-delete/person-delete.component';
 import { PersonViewComponent } from './components/person-view/person-view.component';
@@ -24,7 +24,9 @@ export class AppComponent {
   personne = new Personne();
   personFormGrp: FormGroup;
   displayedColumns: string[] = ['id', 'firstname' ,'name', 'edit', 'delete', 'view'];
-  
+
+  public keywork: string ;
+  searchFormControl: FormControl = new FormControl('');
 
   constructor(public dialog: MatDialog, public personneHttpService: PersonneHttpService) { 
     this.personFormGrp = new FormGroup({
@@ -119,4 +121,23 @@ export class AppComponent {
     this.personDataSubject.next(this.personDatas);
   }
 
+  protected searchClicked(event:any) {
+    this.keywork = this.searchFormControl.value;
+    console.log(this.keywork)
+    if(this.keywork!=""){
+      this.personneHttpService.search(this.keywork).subscribe(result =>{
+        console.log(result);
+        this.tableDataSource.data = result;
+      });
+    }else{
+      this.personneHttpService.findAll().subscribe(result =>{
+        console.log(result);
+        this.tableDataSource.data = result;
+      });
+    }
+  }
+
+  ngOnDestroy(){
+    this.personDataSubscription.unsubscribe();
+  }
 }
