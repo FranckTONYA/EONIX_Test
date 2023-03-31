@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class PersonneServiceIT {
+public class PersonneServiceTest {
     @InjectMocks
     PersonneService personneService;
 
