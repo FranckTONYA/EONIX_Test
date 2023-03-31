@@ -8,7 +8,4 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface PersonneRepository extends CrudRepository<Personne, Long> {
-    @Query("SELECT p FROM Personne p WHERE p.nom LIKE %:keyword"
-            + " OR p.prenom LIKE %:keyword")
-    public List<Personne> search(@Param("keyword") String keyword);
 }

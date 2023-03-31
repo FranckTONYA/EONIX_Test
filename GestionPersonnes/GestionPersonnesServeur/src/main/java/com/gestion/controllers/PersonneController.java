@@ -35,19 +35,6 @@ public class PersonneController {
         return ResponseEntity.ok(personneService.savePerson(personne));
     }
 
-//    /**
-//     * Update Personne
-//     * @param personne
-//     * @return
-//     */
-//    @PostMapping(value = "update")
-//    public ResponseEntity<?> updatePerson(@RequestBody Personne personne){
-//        logger.debug("Call : Update person");
-//
-//        return ResponseEntity.ok(personneService
-//                .updatePerson(personne));
-//    }
-
 
     /**
      * Find person by ID

@@ -24,6 +24,10 @@ public class PersonneService {
         return personneRepository;
     }
 
+    public void setPersonneRepository(PersonneRepository personneRepository) {
+        this.personneRepository = personneRepository;
+    }
+
     /**
      * Save person in DB
      * @param personne
