@@ -48,9 +48,8 @@ export class AppComponent {
 
   addPerson(){
     const dialogRef = this.dialog.open(PersonEditorComponent, {
-      height: '800px',
+      height: '500px',
       width: '600px',
-      data: {personne: this.personne}
     });
 
     dialogRef.afterClosed().subscribe(result => {

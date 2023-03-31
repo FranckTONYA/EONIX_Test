@@ -25,24 +25,9 @@ export class PersonEditorComponent {
     } else {
       this.personne = new Personne();
     }
-    // this.route.paramMap.subscribe(params => {
-    //   let data: Personne = (params as any).params;
-    //   if (data.id != null) {
-    //     this.personne = data;
-    //   } else {
-    //     this.personne = new Personne();
-    //   }
-    // });
   }
 
   onSubmit() {
-    // this.personneHttpService.save(this.personne).subscribe(result => this.gotoHome());
-    // this.dialogRef.close();
-    // this.gotoHome();
-  }
-
-  gotoHome() {
-    this.router.navigate(['/home']);
   }
 
   onNoClick(): void {

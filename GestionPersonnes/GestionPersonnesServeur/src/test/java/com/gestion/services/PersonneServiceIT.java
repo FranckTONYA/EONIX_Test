@@ -34,7 +34,6 @@ public class PersonneServiceIT {
         when(personneRepository.save(Mockito.any(Personne.class))).then(AdditionalAnswers.returnsFirstArg());
         when(personneRepository.findAll()).thenReturn(personneList);
         when(personneRepository.findById(Mockito.anyLong())).thenReturn(Optional.ofNullable(personne));
-//        when(personneService.search(Mockito.anyString())).thenReturn(personneList);
 
         personneService.setPersonneRepository(personneRepository);
     }
